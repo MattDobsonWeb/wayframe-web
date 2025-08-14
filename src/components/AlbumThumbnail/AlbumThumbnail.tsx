@@ -83,14 +83,6 @@ const AlbumThumbnail: React.FC<AlbumThumbnailProps> = ({
         </div>
       </ScrollContainer>
 
-      {/* <div className="relative aspect-[3/2] overflow-hidden border-b">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
-      </div> */}
-
       <div className="flex items-center border-b text-xxs">
         <div className="border-r p-2 flex-grow">{location}</div>
 
@@ -106,14 +98,6 @@ const AlbumThumbnail: React.FC<AlbumThumbnailProps> = ({
         </span>
         <h3 className="font-semibold text-md text-slate-900">{title}</h3>
       </div>
-
-      {/* <div className="text-xs p-3 leading-relaxed">
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quod
-          eos eveniet magni! Qui facere magnam dicta necessitatibus error
-          repellendus...
-        </p>
-      </div> */}
 
       <div className="flex items-center border-t text-xxs">
         <div className="w-1/4 flex border-r items-center justify-center p-3 py-2 gap-2">
