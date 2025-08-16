@@ -1,22 +1,28 @@
-export interface IAlbum extends Document {
-  _id: Types.ObjectId;
-  title: string;
-  description?: string;
-  coverPhoto?: Types.ObjectId;
-  photos: Types.ObjectId[];
-  owner: Types.ObjectId;
-  isPublic: boolean;
-  tags: string[];
-  location?: {
-    name: string;
-    coordinates?: {
-      latitude: number;
-      longitude: number;
+export interface IPopulatedAlbumPhoto {
+  _id: string;
+  filename: string;
+  cloudflareUrl: string;
+  thumbnailUrl?: string;
+  title?: string;
+  dimensions: {
+    width: number;
+    height: number;
+  };
+  metadata: {
+    camera?: {
+      make?: string;
+      model?: string;
+    };
+    lens?: {
+      make?: string;
+      model?: string;
+      focalLength?: number;
+    };
+    settings?: {
+      iso?: number;
+      aperture?: number;
+      shutterSpeed?: string;
     };
   };
-  viewCount: number;
-  likeCount: number;
   createdAt: Date;
-  updatedAt: Date;
-  getPublicInfo(): object;
 }
